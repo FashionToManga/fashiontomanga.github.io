@@ -1,64 +1,237 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>FashionToManga</title>
 
 <style>
+
 body{
-    margin:0;
-    font-family: Arial, sans-serif;
-    background:#fff6fb;
-    color:#333;
-    text-align:center;
+margin:0;
+background:#fdf9ff;
+font-family:Trebuchet MS,sans-serif;
+color:#5b3d75;
+background-image:
+linear-gradient(rgba(220,210,255,.15) 1px, transparent 1px),
+linear-gradient(90deg, rgba(220,210,255,.15) 1px, transparent 1px);
+background-size:40px 40px;
 }
 
 header{
-    padding:80px 20px;
-    background:linear-gradient(135deg,#ffd6f5,#d6e8ff);
+text-align:center;
+padding:30px 20px;
+position:relative;
 }
 
-h1{
-    font-size:4rem;
-    margin:0;
+.logo{
+max-width:700px;
+width:90%;
 }
 
-p{
-    font-size:1.2rem;
+.subtitle{
+margin-top:10px;
+letter-spacing:3px;
+font-size:14px;
+color:#9c6dc9;
 }
 
-.section{
-    padding:60px 20px;
+nav{
+max-width:1200px;
+margin:auto;
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:15px;
+padding:15px;
 }
 
-.card{
-    max-width:800px;
-    margin:auto;
-    background:white;
-    padding:30px;
-    border-radius:20px;
-    box-shadow:0 5px 20px rgba(0,0,0,.08);
+nav a{
+text-decoration:none;
+padding:12px 24px;
+background:#ffd7f3;
+border:2px solid #d7b2ff;
+border-radius:15px;
+color:#6c4b9b;
+font-weight:bold;
 }
+
+.container{
+max-width:1200px;
+margin:auto;
+padding:20px;
+display:grid;
+grid-template-columns:300px 1fr 320px;
+gap:20px;
+}
+
+.window{
+background:white;
+border:2px solid #d7b2ff;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 0 20px rgba(210,180,255,.25);
+}
+
+.window-title{
+background:linear-gradient(to right,#efc6ff,#d8c5ff);
+padding:10px;
+font-weight:bold;
+}
+
+.window-content{
+padding:15px;
+}
+
+.profile{
+width:100%;
+border-radius:10px;
+}
+
+.featured-art{
+width:100%;
+border-radius:10px;
+}
+
+footer{
+margin-top:40px;
+padding:20px;
+text-align:center;
+font-size:14px;
+color:#9c6dc9;
+}
+
+.sparkle{
+position:fixed;
+pointer-events:none;
+animation:float 5s linear infinite;
+opacity:.6;
+}
+
+@keyframes float{
+from{
+transform:translateY(0);
+}
+to{
+transform:translateY(-100vh);
+}
+}
+
+@media(max-width:1000px){
+
+.container{
+grid-template-columns:1fr;
+}
+
+}
+
 </style>
 </head>
 
 <body>
 
 <header>
-<h1>FashionToManga</h1>
-<p>Illustrations • Fashion • Manga • Lifestyle</p>
+
+<img src="fashiontomanga-logo.png" class="logo">
+
+<div class="subtitle">
+ILLUSTRAZIONI • MODA • ARTE • CULTURA POP
+</div>
+
 </header>
 
-<section class="section">
-<div class="card">
-<h2>Welcome</h2>
+<nav>
+<a href="#">Illustrazioni</a>
+<a href="#">FashionToBlog</a>
+<a href="#">FashionToArt</a>
+<a href="#">Chi sono?</a>
+<a href="#">Contatti</a>
+</nav>
+
+<div class="container">
+
+<div>
+
+<div class="window">
+<div class="window-title">Chi sono?</div>
+<div class="window-content">
+
+<img src="https://placehold.co/300x400" class="profile">
+
 <p>
-Welcome to my creative space.
-Here you'll find illustrations, articles and projects inspired by fashion, manga and everyday life.
+Ciao! Benvenuti nel mio piccolo angolo dedicato a illustrazione,
+moda, manga e cultura pop.
 </p>
+
 </div>
-</section>
+</div>
+
+</div>
+
+<div>
+
+<div class="window">
+<div class="window-title">Ultima Illustrazione</div>
+<div class="window-content">
+
+<img src="https://placehold.co/700x500" class="featured-art">
+
+</div>
+</div>
+
+</div>
+
+<div>
+
+<div class="window">
+<div class="window-title">FashionToBlog</div>
+<div class="window-content">
+
+<p>
+Qui comparirà l'ultimo articolo pubblicato.
+</p>
+
+</div>
+</div>
+
+<div style="height:20px"></div>
+
+<div class="window">
+<div class="window-title">Playlist</div>
+<div class="window-content">
+
+<p>Playlist in arrivo 🎵</p>
+
+</div>
+</div>
+
+</div>
+
+</div>
+
+<footer>
+© FashionToManga
+</footer>
+
+<script>
+
+for(let i=0;i<25;i++){
+
+let s=document.createElement("div");
+
+s.innerHTML="✦";
+
+s.className="sparkle";
+
+s.style.left=Math.random()*100+"vw";
+s.style.top=Math.random()*100+"vh";
+s.style.fontSize=(10+Math.random()*20)+"px";
+
+document.body.appendChild(s);
+
+}
+
+</script>
 
 </body>
 </html>
