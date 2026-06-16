@@ -41,7 +41,36 @@ margin-right:-20px;
 max-width:700px;
 width:90%;
 }
-.mascot{
+ .logo-shine{
+position:relative;
+display:inline-block;
+overflow:hidden;
+}
+
+.logo-shine::after{
+content:"";
+
+position:absolute;
+top:-20%;
+left:-150%;
+
+width:60%;
+height:140%;
+
+background:linear-gradient(
+90deg,
+transparent,
+rgba(255,255,255,0.75),
+transparent
+);
+
+transform:rotate(18deg);
+
+animation:logoShine 8s infinite;
+
+pointer-events:none;
+}
+ .mascot{
 width:130px;
 height:auto;
 margin-right:-25px;
@@ -170,7 +199,22 @@ filter:drop-shadow(0 0 12px rgba(255,220,255,.9));
 filter:drop-shadow(0 0 4px rgba(255,210,255,.4));
 }
 
+}
+ @keyframes logoShine{
 
+0%{
+left:-150%;
+}
+
+15%{
+left:150%;
+}
+
+100%{
+left:150%;
+}
+
+}
  @media(max-width:1000px){
 
 .container{
@@ -197,8 +241,11 @@ margin-right:-15px;
 
 </div>
 
+<div class="logo-shine">
+
 <img src="images/logo.png" class="logo" alt="FashionToManga">
 
+</div>
 </div>
 <div class="subtitle">
 ILLUSTRAZIONI • MODA • ARTE • CULTURA POP
