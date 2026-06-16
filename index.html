@@ -53,24 +53,7 @@ floatMascot 4s ease-in-out infinite,
 glowMascot 3s ease-in-out infinite;
 }
 
-.sparkle-star{
-position:absolute;
 
-top:8px;
-left:50px;
-
-font-size:25px;
-color:white;
-
-text-shadow:
-0 0 5px #fff,
-0 0 10px #ffd6ff,
-0 0 20px #ffd6ff;
-
-pointer-events:none;
-z-index:10;
- animation:sparkleTwinkle 1.8s ease-in-out infinite;
-}
  .subtitle{
 margin-top:-20px;
 letter-spacing:3px;
@@ -186,34 +169,6 @@ filter:drop-shadow(0 0 12px rgba(255,220,255,.9));
 100%{
 filter:drop-shadow(0 0 4px rgba(255,210,255,.4));
 }
-@keyframes sparkleTwinkle{
-
-0%{
-opacity:0;
-transform:scale(0.4);
-}
-
-20%{
-opacity:1;
-transform:scale(1.4);
-}
-
-50%{
-opacity:0.7;
-transform:scale(1);
-}
-
-80%{
-opacity:1;
-transform:scale(1.6);
-}
-
-100%{
-opacity:0;
-transform:scale(0.4);
-}
-
-}
 
 
  @media(max-width:1000px){
@@ -239,8 +194,6 @@ margin-right:-15px;
 <div class="mascot-container">
 
 <img src="images/mascot.png" class="mascot" alt="Mascotte">
-
-<div class="sparkle-star">✦</div>
 
 </div>
 
