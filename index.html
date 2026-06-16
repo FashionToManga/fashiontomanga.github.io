@@ -47,20 +47,28 @@ height:auto;
 margin-right:-25px;
 z-index:2;
 position:relative;
+
+animation:
+floatMascot 4s ease-in-out infinite,
+glowMascot 3s ease-in-out infinite;
+}
+
 .sparkle-star{
 position:absolute;
-top:-8px;
-right:-5px;
+top:-15px;
+right:-15px;
 
-font-size:22px;
+font-size:28px;
+color:white;
+
+text-shadow:
+0 0 5px #fff,
+0 0 10px #ffd6ff,
+0 0 20px #ffd6ff;
 
 pointer-events:none;
 
-animation:sparkleTwinkle 2.5s ease-in-out infinite;
-}
- animation:
-floatMascot 4s ease-in-out infinite,
-glowMascot 3s ease-in-out infinite;
+animation:sparkleTwinkle 2s infinite;
 }
  .subtitle{
 margin-top:-20px;
