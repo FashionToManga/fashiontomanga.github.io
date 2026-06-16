@@ -40,6 +40,10 @@ height:auto;
 margin-right:-25px;
 z-index:2;
 position:relative;
+
+animation:
+floatMascot 4s ease-in-out infinite,
+glowMascot 3s ease-in-out infinite;
 }
  .subtitle{
 margin-top:-20px;
@@ -127,8 +131,38 @@ to{
 transform:translateY(-100vh);
 }
 }
+@keyframes floatMascot{
 
-@media(max-width:1000px){
+0%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-10px);
+}
+
+100%{
+transform:translateY(0px);
+}
+
+}
+
+@keyframes glowMascot{
+
+0%{
+filter:drop-shadow(0 0 4px rgba(255,210,255,.4));
+}
+
+50%{
+filter:drop-shadow(0 0 12px rgba(255,220,255,.9));
+}
+
+100%{
+filter:drop-shadow(0 0 4px rgba(255,210,255,.4));
+}
+
+}
+ @media(max-width:1000px){
 
 .container{
 grid-template-columns:1fr;
