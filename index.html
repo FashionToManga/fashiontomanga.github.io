@@ -47,8 +47,18 @@ height:auto;
 margin-right:-25px;
 z-index:2;
 position:relative;
+.sparkle-star{
+position:absolute;
+top:-8px;
+right:-5px;
 
-animation:
+font-size:22px;
+
+pointer-events:none;
+
+animation:sparkleTwinkle 2.5s ease-in-out infinite;
+}
+ animation:
 floatMascot 4s ease-in-out infinite,
 glowMascot 3s ease-in-out infinite;
 }
@@ -167,7 +177,24 @@ filter:drop-shadow(0 0 12px rgba(255,220,255,.9));
 100%{
 filter:drop-shadow(0 0 4px rgba(255,210,255,.4));
 }
+@keyframes sparkleTwinkle{
 
+0%{
+opacity:.2;
+transform:scale(.7) rotate(0deg);
+}
+
+50%{
+opacity:1;
+transform:scale(1.5) rotate(25deg);
+}
+
+100%{
+opacity:.2;
+transform:scale(.7) rotate(0deg);
+}
+
+}
 }
  @media(max-width:1000px){
 
