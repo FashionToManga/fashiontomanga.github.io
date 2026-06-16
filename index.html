@@ -23,17 +23,23 @@ text-align:center;
 padding:30px 20px 60px;
 position:relative;
 }
-.logo{
+ .logo-wrapper{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:0;
+position:relative;
+}
+ .logo{
 max-width:700px;
 width:90%;
 }
 .mascot{
-position:absolute;
-left:-130px;
-top:20px;
-width:95px;
+width:130px;
 height:auto;
+margin-right:-25px;
 z-index:2;
+position:relative;
 }
  .subtitle{
 margin-top:-20px;
@@ -128,10 +134,8 @@ transform:translateY(-100vh);
 grid-template-columns:1fr;
 }
 .mascot{
-width:170px;
-left:50%;
-transform:translateX(-180px);
-top:140px;
+width:90px;
+margin-right:-15px;
 }
 }
 
@@ -142,16 +146,20 @@ top:140px;
 
 <header>
 
-<img src="images/logo.png" class="logo" alt="FashionToManga">
+<div class="logo-wrapper">
 
 <img src="images/mascot.png" class="mascot" alt="Mascotte">
+
+<img src="images/logo.png" class="logo" alt="FashionToManga">
+
+</div>
 
 <div class="subtitle">
 ILLUSTRAZIONI • MODA • ARTE • CULTURA POP
 </div>
 
 </header>
-<nav>
+ <nav>
 <a href="#">Illustrazioni</a>
 <a href="#">FashionToBlog</a>
 <a href="#">FashionToArt</a>
