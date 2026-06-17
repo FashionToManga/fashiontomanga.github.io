@@ -9,15 +9,25 @@
 
 body{
 margin:0;
-background:#fdf9ff;
 font-family:Trebuchet MS,sans-serif;
 color:#5b3d75;
-background-image:
-linear-gradient(rgba(220,210,255,.15) 1px, transparent 1px),
-linear-gradient(90deg, rgba(220,210,255,.15) 1px, transparent 1px);
-background-size:40px 40px;
-}
 
+background:
+radial-gradient(
+circle at center,
+rgba(220,245,255,.95) 0%,
+rgba(255,225,245,.90) 35%,
+rgba(215,255,245,.90) 65%,
+rgba(240,230,255,.95) 100%
+);
+
+background-image:
+linear-gradient(rgba(185,145,255,.18) 1px, transparent 1px),
+linear-gradient(90deg, rgba(185,145,255,.18) 1px, transparent 1px);
+
+background-size:40px 40px;
+background-attachment:fixed;
+}
 header{
 text-align:center;
 padding:30px 20px 60px;
