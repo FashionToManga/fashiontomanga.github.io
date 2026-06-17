@@ -33,13 +33,13 @@ transparent 45%
 ),
 
 linear-gradient(
-rgba(190,120,255,.35) 1px,
+rgba(220,120,255,.18) 1px,
 transparent 1px
 ),
 
 linear-gradient(
 90deg,
-rgba(190,120,255,.35) 1px,
+rgba(220,120,255,.55) 1px,
 transparent 1px
 );
 
@@ -51,8 +51,13 @@ auto,
 auto,
 40px 40px,
 40px 40px;
-
-background-attachment:fixed;
+background-blend-mode:
+screen,
+screen,
+screen,
+normal,
+normal;
+ background-attachment:fixed;
 }
  header{
 text-align:center;
@@ -80,39 +85,8 @@ position:relative;
 z-index:2;
 }
 
- .logo-shine{
-position:relative;
-display:inline-block;
-overflow:hidden;
-}
-
 .logo-shine::after{
-content:"";
-
-position:absolute;
-top:-20%;
-left:-150%;
-
-width:25%;
-height:120%;
-
-background:linear-gradient(
-90deg,
-transparent,
-rgba(120,255,255,.15),
-rgba(120,200,255,.35),
-rgba(255,170,255,.45),
-rgba(170,220,255,.45),
-rgba(255,255,180,.35),
-transparent
-);
- mix-blend-mode:screen;
- 
- transform:rotate(18deg);
-
-animation:logoShine 8s infinite;
-
-pointer-events:none;
+display:none;
 }
  .mascot{
 width:130px;
