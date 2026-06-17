@@ -12,23 +12,49 @@ margin:0;
 font-family:Trebuchet MS,sans-serif;
 color:#5b3d75;
 
-background:
+background-image:
+
 radial-gradient(
-circle at center,
-rgba(220,245,255,.95) 0%,
-rgba(255,225,245,.90) 35%,
-rgba(215,255,245,.90) 65%,
-rgba(240,230,255,.95) 100%
+circle at 20% 20%,
+rgba(255,210,240,.35) 0%,
+transparent 35%
+),
+
+radial-gradient(
+circle at 80% 25%,
+rgba(180,255,245,.35) 0%,
+transparent 35%
+),
+
+radial-gradient(
+circle at 50% 60%,
+rgba(190,220,255,.30) 0%,
+transparent 45%
+),
+
+linear-gradient(
+rgba(185,145,255,.12) 1px,
+transparent 1px
+),
+
+linear-gradient(
+90deg,
+rgba(185,145,255,.12) 1px,
+transparent 1px
 );
 
-background-image:
-linear-gradient(rgba(185,145,255,.18) 1px, transparent 1px),
-linear-gradient(90deg, rgba(185,145,255,.18) 1px, transparent 1px);
+background-color:#f8f7ff;
 
-background-size:40px 40px;
+background-size:
+auto,
+auto,
+auto,
+40px 40px,
+40px 40px;
+
 background-attachment:fixed;
 }
-header{
+ header{
 text-align:center;
 padding:30px 20px 60px;
 position:relative;
@@ -53,30 +79,7 @@ width:90%;
 position:relative;
 z-index:2;
 }
- .logo-wrapper::before{
-content:"";
-position:absolute;
-top:50%;
-left:50%;
 
-width:650px;
-height:250px;
-
-transform:translate(-50%,-50%);
-
-background:radial-gradient(
-ellipse at center,
-rgba(255,170,255,.30) 0%,
-rgba(170,220,255,.25) 35%,
-rgba(210,180,255,.20) 60%,
-transparent 100%
-);
-
-filter:blur(45px);
-
-pointer-events:none;
-z-index:1;
-}
  .logo-shine{
 position:relative;
 display:inline-block;
