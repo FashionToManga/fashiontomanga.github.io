@@ -37,9 +37,35 @@ align-items:center;
 justify-content:center;
 margin-right:-20px;
 }
- .logo{
+.logo{
 max-width:700px;
 width:90%;
+position:relative;
+z-index:2;
+}
+ .logo-wrapper::before{
+content:"";
+position:absolute;
+top:50%;
+left:50%;
+
+width:650px;
+height:250px;
+
+transform:translate(-50%,-50%);
+
+background:radial-gradient(
+ellipse at center,
+rgba(255,170,255,.30) 0%,
+rgba(170,220,255,.25) 35%,
+rgba(210,180,255,.20) 60%,
+transparent 100%
+);
+
+filter:blur(45px);
+
+pointer-events:none;
+z-index:1;
 }
  .logo-shine{
 position:relative;
