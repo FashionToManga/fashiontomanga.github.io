@@ -32,17 +32,27 @@ rgba(140,180,255,.15) 0%,
 transparent 45%
 ),
 
+inear-gradient(
+rgba(255,120,255,.10) 2px,
+transparent 2px
+),
+
 linear-gradient(
-rgba(220,120,255,.18) 1px,
+90deg,
+rgba(255,120,255,.10) 2px,
+transparent 2px
+),
+
+linear-gradient(
+rgba(220,120,255,.60) 1px,
 transparent 1px
 ),
 
 linear-gradient(
 90deg,
-rgba(220,120,255,.55) 1px,
+rgba(220,120,255,.60) 1px,
 transparent 1px
 );
-
 background-color:#1a1428;
 
 background-size:
@@ -50,14 +60,18 @@ auto,
 auto,
 auto,
 40px 40px,
+40px 40px,
+40px 40px,
 40px 40px;
 background-blend-mode:
 screen,
 screen,
 screen,
+screen,
+screen,
 normal,
 normal;
- background-attachment:fixed;
+background-attachment:fixed;
 }
  header{
 text-align:center;
