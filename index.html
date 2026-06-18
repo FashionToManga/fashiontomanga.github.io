@@ -385,6 +385,26 @@ transform:scaleY(1.2);
 }
 
 }
+.angel-player{
+width:100%;
+max-width:320px;
+display:block;
+margin:auto;
+
+filter:
+drop-shadow(0 0 15px rgba(220,180,255,.5));
+
+transition:.4s;
+}
+
+.angel-player:hover{
+
+transform:scale(1.04);
+
+filter:
+drop-shadow(0 0 30px rgba(220,180,255,.9));
+
+}
 </style>
 </head>
 
@@ -464,52 +484,23 @@ Qui comparirà l'ultimo articolo pubblicato.
 
 </div>
 </div>
-<div class="window player-window">
-  <div class="window-title">🎵 FashionToPlayer 2000</div>
-
-  <div class="window-content">
-
-    <div class="player-screen">
-      <div class="track-name">No playlist loaded...</div>
-      <div class="track-time">00:00 / 00:00</div>
-    </div>
-
-    <div class="equalizer">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-
-    <div class="progress-bar">
-      <div class="progress-fill"></div>
-    </div>
-
-    <div class="player-controls">
-      <button>⏮</button>
-      <button>▶</button>
-      <button>⏸</button>
-      <button>⏭</button>
-    </div>
-
-  </div>
- <div style="height:20px"></div>
-
 <div class="window">
-<div class="window-title">Playlist</div>
+
+<div class="window-title">
+🎵 FashionToPlaylist
+</div>
+
 <div class="window-content">
 
-<p>Playlist in arrivo 🎵</p>
+<img
+src="images/fashiontoplayer.png"
+class="angel-player"
+alt="FashionToPlaylist">
 
 </div>
-</div>
 
 </div>
-
-</div>
-
-<footer>
+ <footer>
 © FashionToManga
 </footer>
 
