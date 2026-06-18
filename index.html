@@ -275,7 +275,116 @@ width:90px;
 margin-right:-15px;
 }
 }
+.player-window{
+margin-top:20px;
+}
 
+.player-screen{
+background:linear-gradient(
+to bottom,
+#f6ebff,
+#e8d3ff
+);
+border:2px solid #d7b2ff;
+border-radius:10px;
+padding:12px;
+text-align:center;
+margin-bottom:12px;
+}
+
+.track-name{
+font-weight:bold;
+font-size:14px;
+margin-bottom:5px;
+}
+
+.track-time{
+font-size:12px;
+opacity:.7;
+}
+
+.progress-bar{
+height:10px;
+background:#eddcff;
+border-radius:999px;
+overflow:hidden;
+margin:12px 0;
+}
+
+.progress-fill{
+width:35%;
+height:100%;
+background:linear-gradient(
+90deg,
+#ffb6f3,
+#caa5ff
+);
+border-radius:999px;
+}
+
+.player-controls{
+display:flex;
+justify-content:center;
+gap:10px;
+margin-top:10px;
+}
+
+.player-controls button{
+background:#ffd7f3;
+border:2px solid #d7b2ff;
+border-radius:12px;
+padding:8px 12px;
+cursor:pointer;
+font-size:16px;
+}
+
+.equalizer{
+display:flex;
+justify-content:center;
+align-items:flex-end;
+gap:4px;
+height:30px;
+margin:10px 0;
+}
+
+.equalizer span{
+width:6px;
+background:#c38cff;
+border-radius:999px;
+animation:bounce 1s infinite ease-in-out;
+}
+
+.equalizer span:nth-child(1){
+height:10px;
+}
+
+.equalizer span:nth-child(2){
+height:24px;
+}
+
+.equalizer span:nth-child(3){
+height:18px;
+}
+
+.equalizer span:nth-child(4){
+height:28px;
+}
+
+.equalizer span:nth-child(5){
+height:14px;
+}
+
+@keyframes bounce{
+
+0%,100%{
+transform:scaleY(.6);
+}
+
+50%{
+transform:scaleY(1.2);
+}
+
+}
 </style>
 </head>
 
@@ -355,8 +464,37 @@ Qui comparirà l'ultimo articolo pubblicato.
 
 </div>
 </div>
+<div class="window player-window">
+  <div class="window-title">🎵 FashionToPlayer 2000</div>
 
-<div style="height:20px"></div>
+  <div class="window-content">
+
+    <div class="player-screen">
+      <div class="track-name">No playlist loaded...</div>
+      <div class="track-time">00:00 / 00:00</div>
+    </div>
+
+    <div class="equalizer">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <div class="progress-bar">
+      <div class="progress-fill"></div>
+    </div>
+
+    <div class="player-controls">
+      <button>⏮</button>
+      <button>▶</button>
+      <button>⏸</button>
+      <button>⏭</button>
+    </div>
+
+  </div>
+ <div style="height:20px"></div>
 
 <div class="window">
 <div class="window-title">Playlist</div>
